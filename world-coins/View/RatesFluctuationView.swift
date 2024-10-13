@@ -28,10 +28,24 @@ struct RatesFluctuationView: View {
     @StateObject var viewModel = FluctuationViewModel()
     @State private var searchText = ""
     
+    var searchResult: [Fluctuation] {
+        if searchText.isEmpty {
+            return viewModel.fluctuations
+        } else {
+            return viewModel.fluctuations.filter {
+                $0.symbol.contains(searchText.uppercased()) ||
+                $0.change.formatter(decimalPlaces: 4).contains(searchText.uppercased()) ||
+                $0.changePct.toPercentege().contains(searchText.uppercased()) ||
+                $0.endRate.formatter(decimalPlaces: 2).contains(searchText.uppercased())
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
                 baseCurrencyPeriodFilterView
+                ratesFluctuationListView
             }
             .searchable(text: $searchText)
             .navigationTitle("Converção de moedas")
@@ -106,6 +120,32 @@ struct RatesFluctuationView: View {
         }
         .padding(.top, 8)
         .padding(.bottom, 16)
+    }
+    
+    private var ratesFluctuationListView: some View {
+        List(searchResult) { fluctuation in
+            VStack {
+                HStack(alignment: .center, spacing: 8) {
+                    Text("\(fluctuation.symbol) / BRL")
+                        .font(.system(size: 14, weight: .medium))
+                    Text(fluctuation.endRate.formatter(decimalPlaces: 2 ))
+                        .font(.system(size: 14, weight: .bold))
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                    Text(fluctuation.change.formatter(decimalPlaces: 4, with: true))
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(fluctuation.change.color)
+                    Text("(\(fluctuation.changePct.toPercentege()))")
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(fluctuation.change.color)
+                }
+                Divider()
+                    .padding(.leading, -20)
+                    .padding(.trailing, -40)
+            }
+            .listRowSeparator(.hidden)
+            .listRowBackground(Color.white)
+        }
+        .listStyle(.plain)
     }
 }
 

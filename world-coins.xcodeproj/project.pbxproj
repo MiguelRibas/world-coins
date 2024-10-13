@@ -18,6 +18,7 @@
 		DD736E542CB197AE00FAFB94 /* RatesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD736E532CB197AE00FAFB94 /* RatesStore.swift */; };
 		DD736E562CB19CC900FAFB94 /* CurrencyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD736E552CB19CC900FAFB94 /* CurrencyStore.swift */; };
 		DDC00BBE2CBC13DF000EAB96 /* RatesFluctuationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC00BBD2CBC13DF000EAB96 /* RatesFluctuationView.swift */; };
+		DDC00BC02CBC3034000EAB96 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC00BBF2CBC3034000EAB96 /* Extension.swift */; };
 		DDFD23722CA847B500617020 /* world_coinsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD23712CA847B500617020 /* world_coinsApp.swift */; };
 		DDFD23742CA847B500617020 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD23732CA847B500617020 /* ContentView.swift */; };
 		DDFD23762CA847B600617020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDFD23752CA847B600617020 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		DD736E532CB197AE00FAFB94 /* RatesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesStore.swift; sourceTree = "<group>"; };
 		DD736E552CB19CC900FAFB94 /* CurrencyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyStore.swift; sourceTree = "<group>"; };
 		DDC00BBD2CBC13DF000EAB96 /* RatesFluctuationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesFluctuationView.swift; sourceTree = "<group>"; };
+		DDC00BBF2CBC3034000EAB96 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		DDFD236E2CA847B500617020 /* world-coins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "world-coins.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDFD23712CA847B500617020 /* world_coinsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = world_coinsApp.swift; sourceTree = "<group>"; };
 		DDFD23732CA847B500617020 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				DDFD23712CA847B500617020 /* world_coinsApp.swift */,
 				DDFD23752CA847B600617020 /* Assets.xcassets */,
 				DDFD23772CA847B600617020 /* Preview Content */,
+				DDC00BBF2CBC3034000EAB96 /* Extension.swift */,
 			);
 			path = "world-coins";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				DD736E542CB197AE00FAFB94 /* RatesStore.swift in Sources */,
 				DD2E0C542CB1B27F00A99D8E /* DataProviderManager.swift in Sources */,
 				DD736E4E2CB18CCA00FAFB94 /* RatesFluctuationObject.swift in Sources */,
+				DDC00BC02CBC3034000EAB96 /* Extension.swift in Sources */,
 				DD2E0C5D2CB1B8E700A99D8E /* CurrencySymbolsDataProvider.swift in Sources */,
 				DDFD23832CA8516700617020 /* RatesApi.swift in Sources */,
 				DD2E0C582CB1B35B00A99D8E /* RatesFluctuationDataProvider.swift in Sources */,
