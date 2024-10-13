@@ -47,7 +47,7 @@ struct RatesFluctuationView: View {
     }
     
     private var baseCurrencyPeriodFilterView: some View {
-        HStack {
+        HStack(alignment: .center, spacing: 16) {
             Button {
                 print("Filtrar moeda base")
             } label: {
@@ -62,7 +62,50 @@ struct RatesFluctuationView: View {
             }
             .background(Color(UIColor.lightGray))
             .cornerRadius(8)
+            
+            Button { 
+                print("1 dia")
+            } label: {
+                Text("1 dia")
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundStyle(.blue)
+                    .underline()
+            }
+            
+            Button {
+                print("7 dias")
+            } label: {
+                Text("7 dias")
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundStyle(.gray)
+            }
+            
+            Button {
+                print("1 mês")
+            } label: {
+                Text("1 mês")
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundStyle(.gray)
+            }
+            
+            Button {
+                print("6 meses")
+            } label: {
+                Text("6 meses")
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundStyle(.gray)
+            }
+            
+            Button {
+                print("1 ano")
+            } label: {
+                Text("1 ano")
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundStyle(.gray)
+            }
         }
+        .padding(.top, 8)
+        .padding(.bottom, 16)
     }
 }
 
